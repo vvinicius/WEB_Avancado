@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalho web 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color" style="background-color: gray;"">
+        <a class="navbar-brand text-white" a href="{% url 'index' %}">Início</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-white" a href="{% url 'index' %}">Lista de Alunos<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+<body>
+	<h1 class="d-flex justify-content-center">Dados do aluno</h1>
+    <div class="box-inside center-block text-center">
+    <table class="table" className="d-flex justify-content-center">
+      <thead class="thead-dark">
+        <tr>
+            <th class="d-inline-block col-1">Nome</th>
+            <th class="d-inline-block col-2">Sobrenome</th>
+            <th class="d-inline-block col-2">Periodo de Ingresso</th>
+            <th class="d-inline-block col-2">Nota - Web Avançado</th>
+            <th class="d-inline-block col-2">Situação</th>
+            <th class="d-inline-block col-2 ">email</th>
+
+        </tr>
+      </thead>
+    <tbody>
+        <tr>
+            <td class="d-inline-block col-1">{{ aluno.nome }}</td>
+            <td class="d-inline-block col-2">{{ aluno.sobrenome }}</td>
+            <td class="d-inline-block col-2">{{ aluno.periodo_ingresso }}</td>
+            <td class="d-inline-block col-2">{{ aluno.nota }}</td>
+            <td class="d-inline-block col-2">{{ aluno.situacao }}</td>
+            <td class="d-inline-block col-2">{{ aluno.email }}</td>
+
+        </tr>
+    </tbody>
+    </table>
+    </div>
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
